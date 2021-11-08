@@ -5,7 +5,7 @@ import { Container, Typography } from '@mui/material';
 import fluoride from '../../../images/fluoride.png'
 import cavity from '../../../images/cavity.png'
 import whitening from '../../../images/whitening.png'
-import Service from '../Servoce/Service';
+import Service from '../Service/Service';
 
 const services = [
     {
@@ -27,25 +27,25 @@ const services = [
 
 const Services = () => {
     return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Container>
-          <Typography>
-              OUR SERVICES
-          </Typography>
-          <Typography>
-              SERVICES WE PROVIDE
-          </Typography>
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            {
-                services.map(service => <Service
-                    key={service.name}
-                    service={service}
-                ></Service>)
-            }
-        
-      </Grid>
-      </Container>
-    </Box>
+        <Box sx={{ flexGrow: 1 }}>
+            <Container>
+                <Typography>
+                    OUR SERVICES
+                </Typography>
+                <Typography>
+                    SERVICES WE PROVIDE
+                </Typography>
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    {
+                        services.map(service => <Service
+                            key={service.name}
+                            service={service}
+                        ></Service>)
+                    }
+
+                </Grid>
+            </Container>
+        </Box>
     );
 };
 
